@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>PayPal with JSF</title>
+</h:head>
+<body>
+<!-- 	#{paypal.success()} -->
+	<div class="feat_prod_box_details">
+
+		<div class="contact_form xacnhan">
+			<div class="form_subtitle">Order Information</div>
+
+			<div class="form_row">
+				<label class="contact"><strong>Transaction Id:</strong></label>
+				${paypal.result.txn_id }
+			</div>
+
+			<div class="form_row">
+				<label class="contact"><strong>First Name:</strong></label>
+				${paypal.result.first_name }
+			</div>
+
+			<div class="form_row">
+				<label class="contact"><strong>Last Name:</strong></label>
+				${paypal.result.last_name }
+			</div>
+
+			<div class="form_row">
+				<label class="contact"><strong>Email:</strong></label>
+				${paypal.result.payer_email }
+			</div>
+
+			<div class="form_row">
+				<label class="contact"><strong>Payment Gross:</strong></label>
+				${paypal.result.payment_gross }
+			</div>
+
+			<div class="form_row">
+				<label class="contact"><strong>Payment Fee:</strong></label>
+				${paypal.result.payment_fee }
+			</div>
+
+
+		</div>
+
+	</div>
+
+</body>
+</html>

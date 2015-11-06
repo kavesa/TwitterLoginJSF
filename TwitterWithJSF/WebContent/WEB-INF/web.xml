@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
+	id="WebApp_ID" version="3.1">
+  <display-name>TwitterWithJSF</display-name>
+  
+  <context-param>
+  	<param-name>javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</param-name>
+  	<param-value>true</param-value>
+  </context-param>
+  
+  <welcome-file-list>    
+    <welcome-file>index.xhtml</welcome-file>    
+  </welcome-file-list>
+  
+  <servlet> 
+    <servlet-name>facesServlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup> 
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>facesServlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+
+	<context-param>
+		<param-name>authtoken</param-name>
+		<param-value>MqxGu1EETzURFj2Tp1-D73aqoFsSswZlbRZPDpI3dCoZkpl4xxzHtNdUNKy</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>posturl</param-name>
+		<param-value>https://www.sandbox.paypal.com/cgi-bin/webscr</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>business</param-name>
+		<param-value>sapo-owner@gmail.com</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>returnurl</param-name>
+		<param-value>http://localhost:8080/TwitterWithJSF/success.xhtml</param-value>
+	</context-param>
+
+</web-app>
